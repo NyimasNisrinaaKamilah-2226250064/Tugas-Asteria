@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kotas', function (Blueprint $table) {
-            $table->uuid('id_kota');
-            $table->primary('id_kota');
-            $table->string('nama_kota',50);
+        Schema::create('jadwals', function (Blueprint $table) {
+            $table->uuid('id');
+            $table->primary('id');
+            $table->string('jam');
+            $table->uuid('film_id');
+            $table->foreign('film_id')->references('id')->on('films')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }
@@ -24,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kotas');
+        Schema::dropIfExists('jadwals');
     }
 };

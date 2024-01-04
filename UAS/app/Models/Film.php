@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kota extends Model
+class Film extends Model
 {
     use HasFactory,HasUuids;
-    public function bioskop ()
+
+    public function jadwal()
     {
-        return $this->hasMany(Bioskop::class,"bioskop_id");
+        return $this->hasMany(Jadwal::class,"film_id");
     }
 }

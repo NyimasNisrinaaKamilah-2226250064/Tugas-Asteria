@@ -1,15 +1,15 @@
 @extends('layout.main')
 @section('title', ' detailFilm')
 @section('content')
-    <h1><p style="font-size: 30px; color: white; font-family:Bookman Old Style; background-color:#589261">Asteria's</p></h1>
+    <h1><p style="font-size: 40px; color: white; font-family:Bookman Old Style; background-color:#589261">Asteria's</p></h1>
     <div class="btn-group" role="group">
 
     </div>
     @foreach ($detailFilm as $item )
-    <div class="card  col-cols-md-3" style="max-width: 540px; margin-top:50px; margin-left: 20px">
+    <div class="card  col-cols-md-3" style="max-width: 540px; margin-top:20px; margin-left: 20px; background-color:#589261">
       <div class="row g-0">
         <div class="col-md-4">
-          {{-- <img src="images/{{$item->film['cover']}}" class="img-fluid rounded-start" style="margin-top:10px; margin-left:10px;"> --}}
+          <img src="images/{{$item->film['cover']}}" class="img-fluid rounded-start" style="margin-top:10px; margin-left:10px;">
         </div>
         <div class="col-md-8">
           <div class="card-body">

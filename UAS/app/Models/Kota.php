@@ -9,8 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class Kota extends Model
 {
     use HasFactory,HasUuids;
-    public function bioskop ()
+    public function bioskop()
     {
-        return $this->hasMany(Bioskop::class,"bioskop_id");
+        return $this->hasMany(Bioskop::class,"kota_id");
     }
 }
